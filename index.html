@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="password">Votre mot de passe : </label><input type="text"  name="password" id="password" />
+    <label for="confirmPassword">Confirmez : </label><input type="text"  name="confirmPassword" id="confirmPassword" />
+    <button type="button" name="button" onclick="changeBorder()">Vérification</button>
+  </form>
+  <script>
+    //declaration de variable
+    function changeBorder(){
+    var pword = document.getElementById('password').value;
+    var confpword = document.getElementById('confirmPassword').value;
+    //declaration de la condition
+    if( pword =  confpword){
+      document.getElementById('password').style.borderColor = '3px solid red';
+      document.getElementById('confirmPassword').style.bordercolor = '3px solid red';
+    } else {
+      document.getElementById('password').style.borderColor = '3px solid green';
+      document.getElementById('confirmPassword').style.borderColor = '3px solid green';
+    }
+  }
+  </script>
+</body>
+</html>
